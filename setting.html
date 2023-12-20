@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Settings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="setting.css">
+    <script src="setting.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pixelify Sans">
+</head>
+
+<body>
+  <div class="logo">
+      <img src="greenhouse.png" width="100px">
+  </div>
+  <h1 style="font-family:Pixelify Sans ;">ArgoSphere</h1>
+    <!-- Tab links -->
+      <div class="tab">
+        <h2>Settings</h2>
+        <button class="tablinks" onclick="openCity(event, 'Soil_Moiture')"id="defaultOpen">Soil_Moiture</button><br>
+        <button class="tablinks" onclick="openCity(event, 'Humidity')">Humidity</button><br>
+        <button class="tablinks" onclick="openCity(event, 'Light_intensity')">Light_intensity</button><br>
+        <button class="tablinks" onclick="openCity(event, 'Temperature')">Temperature</button>
+      </div>
+
+      <!-- Tab content -->
+      <div id="Soil_Moiture" class="tabcontent">
+        <div class="wrapper">
+          <h3>Soil_Moiture</h3>
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input-min" value="0">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input-max" value="100">
+            </div>
+            <div class="confirm">
+              <button onclick="parent.location='Dashbaord.html'" class="btn btn-success" >Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Humidity" class="tabcontent">
+        <div class="wrapper">
+          <h3>Humidity</h3>
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input-min" value="0">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input-max" value="100">
+            </div>
+            <div class="confirm">
+              <button onclick="parent.location='Dashbaord.html'" class="btn btn-success">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Light_intensity" class="tabcontent">
+        <div class="wrapper">
+          <h3>Light_intensity</h3>
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input-min" value="0">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input-max" value="100">
+            </div>
+            <div class="confirm">
+              <button onclick="parent.location='Dashbaord.html'" class="btn btn-success">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Temperature" class="tabcontent">
+        <div class="wrapper">
+          <h3>Temperature</h3>
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <input type="number" class="input-min" value="0">
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <input type="number" class="input-max" value="100">
+            </div>
+            <div class="confirm">
+              <button onclick="parent.location='Dashbaord.html'" class="btn btn-success">Confirm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  <script>
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
